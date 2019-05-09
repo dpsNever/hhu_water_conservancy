@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" style="background:red">
     123
     </div>
 </template>

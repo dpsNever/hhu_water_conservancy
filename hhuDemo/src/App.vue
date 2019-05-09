@@ -1,5 +1,14 @@
 <template>
-  <div id="app">
+  <div id="app" >
+    <ul>
+      <li><router-link v-bind:to="'/'" exact>首页</router-link></li>
+      <li><router-link v-bind:to="'/main'">洪旱告警</router-link></li>
+      <li><router-link v-bind:to="'/main'">水情查询</router-link></li>
+      <li><router-link v-bind:to="'/main'">水利风景区</router-link></li>
+      <li><router-link v-bind:to="'/main'">墒情信息</router-link></li>
+    </ul>
+    
+    
     <router-view/>
   </div>
 </template>
@@ -17,6 +26,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 0 auto;
+  width: 1400px;
+  height: 200px;
+  background:#fff url(./common/images/topNavBG.png) no-repeat center;
 }
+
+
 </style>
