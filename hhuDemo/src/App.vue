@@ -1,12 +1,12 @@
 <template>
   <div id="app" >
     <ul class="top-nav">
-      <li><router-link v-bind:to="'/'" exact>首页</router-link></li>
-      <li><router-link v-bind:to="'/main'">洪旱告警</router-link></li>
-      <li><router-link v-bind:to="'/main'">水情查询</router-link></li>
-      <li><router-link v-bind:to="'/main'">水利风景区</router-link></li>
-      <li><router-link v-bind:to="'/main'">墒情信息</router-link></li>
-      <li><router-link v-bind:to="'/main'">关于我们</router-link></li>
+      <li><router-link v-bind:to="'/'" exact><img id="img1" src="./common/images/mainpage.png" alt=""></router-link></li>
+      <li><router-link v-bind:to="'/main'"><img id="img2" src="./common/images/hongh1.png" alt=""></router-link></li>
+      <li><router-link v-bind:to="'/main'"><img id="img3" src="./common/images/shuiq1.png" alt=""></router-link></li>
+      <li><router-link v-bind:to="'/main'"><img id="img4" src="./common/images/shangq1.png" alt=""></router-link></li>
+      <li><router-link v-bind:to="'/main'"><img id="img5" src="./common/images/guany1.png" alt=""></router-link></li>
+     
     </ul>
     <router-view/>
   </div>
@@ -29,19 +29,47 @@ export default {
   margin: 0 auto;
   width: 1400px;
   height: 200px;
-  background:#fff url(./common/images/topNavBG.png) no-repeat center;
+  background:#fff url(./common/images/bg1.jpg) no-repeat center;
  .top-nav{
   display: flex;
-  height: 20px;
+  
+  width: 60%;
   flex-direction: row;
   list-style: none;
   color: #000;
   position: relative;
-  top:165px;
   
+  top:90px;
+    img{
+      width: 160px;
+      height: 100%;  
+    }
   li{
-    height: 20px;
+    width: 100%;
+    height: 120px;
   }
+}
+
+
+#img1{
+  margin-top: -25px;
+  &:hover{
+  content: url('./common/images/mainpage2.png');
+}
+}
+
+
+#img2:hover{
+  content: url('./common/images/hongh2.png');
+}
+#img3:hover{
+  content: url('./common/images/shuiq2.png');
+}
+#img4:hover{
+  content: url('./common/images/shangq2.png');
+}
+#img5:hover{
+  content: url('./common/images/guany2.png');
 }
 body{
    margin: 0;
