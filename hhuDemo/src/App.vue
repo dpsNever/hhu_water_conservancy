@@ -3,9 +3,9 @@
     <ul class="top-nav">
       <li><router-link v-bind:to="'/'" exact><img id="img1" src="./common/images/mainpage.png" alt=""></router-link></li>
       <li><router-link v-bind:to="'/main'"><img id="img2" src="./common/images/hongh1.png" alt=""></router-link></li>
-      <li><router-link v-bind:to="'/main'"><img id="img3" src="./common/images/shuiq1.png" alt=""></router-link></li>
-      <li><router-link v-bind:to="'/main'"><img id="img4" src="./common/images/shangq1.png" alt=""></router-link></li>
-      <li><router-link v-bind:to="'/main'"><img id="img5" src="./common/images/guany1.png" alt=""></router-link></li>
+      <li><router-link v-bind:to="'/soil'"><img id="img3" src="./common/images/shuiq1.png" alt=""></router-link></li>
+      <li><router-link v-bind:to="'/water'"><img id="img4" src="./common/images/shangq1.png" alt=""></router-link></li>
+      <li><router-link v-bind:to="'/about'"><img id="img5" src="./common/images/guany1.png" alt=""></router-link></li>
      
     </ul>
     <router-view/>
