@@ -5,7 +5,11 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import BaiduMap from 'vue-baidu-map'
 
+Vue.use(BaiduMap,{
+  ak: '1d0hvyg8imkCmIkeA5LuMzM9Et9sj0iP'
+})
 Vue.use(ElementUI);
 Vue.config.productionTip = false
 

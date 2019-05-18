@@ -1,8 +1,7 @@
 <template>
   <div class="container">
-    <!-- 主体分为三部分  头部 中部和底部
-        头部：顶部导航栏
-        中部：各种主要信息  轮播图 百度地图
+    <!-- 主体分为两部分  头部和底部
+        头部：各种主要信息  轮播图 百度地图
         底部：版权信息
      -->
      <!-- 头
@@ -275,10 +274,13 @@
           </div>
         </div>
       </div>
-      <!-- 中部 -->
-      <div class="middle"></div>
+      
       <!-- 底部 -->
-      <div class="bottom"></div>
+      <div class="bottom">
+        <div class="annotation">
+          <p>河海大学计算机与信息学院</p>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -422,8 +424,7 @@ export default {
             height: 250px;
           }
         }
-      }
-      .third-line{
+        .third-line{
         width: 21%;
         height: 100%;
         margin-left: 3%;
@@ -486,8 +487,18 @@ export default {
             }
           }
         }
-
       }
+    }
+    .bottom{
+      width: 100%;
+      height: 50px;
+      background: rgb(32, 128, 192);
+      .annotation{
+        p{
+          line-height: 50px;
+        }
+      }
+    }  
     
   }
   

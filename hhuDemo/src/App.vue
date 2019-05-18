@@ -28,7 +28,7 @@ export default {
   margin: 0 auto;
   width: 1400px;
   height: 200px;
-  background:#fff url(./common/images/1.jpg) no-repeat center;
+  background:#fff url(./common/images/bg1.jpg) no-repeat center;
   border-radius: 20px;
  .top-nav{
   display: flex;

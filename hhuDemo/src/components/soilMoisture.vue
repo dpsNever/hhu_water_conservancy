@@ -1,10 +1,11 @@
 <template>
     <div class="container">
-        <el-carousel :interval="4000" indicator-position="none" type="card" height="200px" id="el-carousel">
-              <el-carousel-item v-for="(item,index) in imgList" :key="index">
-                <img :src="item.src" class="iImg" alt="#">
-              </el-carousel-item>
-        </el-carousel>
+      <el-tabs v-model="activeName" @tab-click="handleClick">
+        <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
+        <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
+        <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
+        <el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
+      </el-tabs>
     </div>
 </template>
 
@@ -13,14 +14,7 @@ export default {
     name: 'App',
     data(){
         return{
-            imgList:[
-            {index: 0,src:require('../common/images/guany1.png')},
-            {index: 1,src:"../common/images/guany2.png"},
-            {index: 2,src:"./common/images/hongh2.png"},
-            {index: 3,src:"./common/images/hongh2.png"},
-            {index: 4,src:"./common/images/hongh2.png"},
-            {index: 5,src:"./common/images/hongh2.png"}
-            ]
+            
         
         }
     }
@@ -35,22 +29,4 @@ export default {
     margin-top: 100px;
 }
 
-.iImg{
-    height: 200px;
-}
- .el-carousel__item h3 {
-    color: #475669;
-    font-size: 14px;
-    opacity: 0.75;
-    line-height: 200px;
-    margin: 0;
-  }
-  
-  .el-carousel__item:nth-child(2n) {
-    /* background-color: #99a9bf; */
-  }
-  
-  .el-carousel__item:nth-child(2n+1) {
-    /* background-color: #d3dce6; */
-  }
 </style>

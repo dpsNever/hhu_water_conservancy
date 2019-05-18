@@ -12,6 +12,7 @@
   "dependencies": {
     "element-ui": "^2.8.2",
     "vue": "^2.5.2",
+    "vue-baidu-map": "^0.21.20",
     "vue-lazyload": "^1.2.6",
     "vue-router": "^3.0.1"
   },
