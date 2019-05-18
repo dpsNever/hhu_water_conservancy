@@ -6,7 +6,6 @@
       <li><router-link v-bind:to="'/soil'"><img id="img3" src="./common/images/shuiq1.png" alt=""></router-link></li>
       <li><router-link v-bind:to="'/water'"><img id="img4" src="./common/images/shangq1.png" alt=""></router-link></li>
       <li><router-link v-bind:to="'/about'"><img id="img5" src="./common/images/guany1.png" alt=""></router-link></li>
-     
     </ul>
     <router-view/>
   </div>
@@ -30,6 +29,7 @@ export default {
   width: 1400px;
   height: 200px;
   background:#fff url(./common/images/1.jpg) no-repeat center;
+  border-radius: 20px;
  .top-nav{
   display: flex;
   
@@ -57,8 +57,6 @@ export default {
   content: url('./common/images/mainpage2.png');
 }
 }
-
-
 #img2:hover{
   content: url('./common/images/hongh2.png');
 }

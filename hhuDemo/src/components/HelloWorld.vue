@@ -1,5 +1,5 @@
 <template>
-  <div class="container" style="background:red">
+  <div class="container">
     <!-- 主体分为三部分  头部 中部和底部
         头部：顶部导航栏
         中部：各种主要信息  轮播图 百度地图
@@ -10,10 +10,8 @@
      部 -->
       <div class="top">
         <div class="first-line">
-          11
           <div class="news">
-            <p>>>最新关注</p>
-            <br>
+            <h3>最新关注</h3>
             <ul>
               <li><a href="http://www.mwr.gov.cn/xw/slyw/201905/t20190515_1197349.html" target="_blank">鄂竟平检查指导甘肃省水旱灾...</a></li>
               <li><a href="">蒋旭光检查南水北调中线河南..</a></li>
@@ -70,24 +68,76 @@
                 
               </el-tabs>
           </div>
+          <div class="seven-river">
+            <h3>中国七大水系</h3>
+            <ul>
+              <li><a href="">长江水系</a></li>
+              <li><a href="">黄河水系</a></li>
+              <li><a href="">淮河水系</a></li>
+              <li><a href="">海河水系</a></li>
+              <li><a href="">珠江水系</a></li>
+              <li><a href="">松辽水系</a></li>
+              <li><a href="">太湖水系</a></li>
+            </ul>
+          </div>
         </div>
         <div class="second-line">
           <!-- 今日雨水情部分 实现动态文字滚动 -->
+          <h4>今日雨水情</h4>
           <div class="today-rain">
-              <h4>今日雨水情</h4>
               <div class="marquee-list">
                 <p class="marquee-text" v-for="(text,index) in marqueeList" :key="index">{{text}}</p>
               </div>
             </div>
           <div class="hot-info">
+            <h3>热点信息</h3>
              <el-carousel :interval="4000" type="card" height="200px">
-              <el-carousel-item v-for="item in 6" :key="item">
-                <h3 class="medium">{{ item }}</h3>
+              <el-carousel-item v-for="(item,index) in imgList" :key="index">
+                <img :src="item.src" class="iImg" alt="#">
               </el-carousel-item>
             </el-carousel>
           </div>
           <!-- 热点水情 -->
           <div class="hot-water">
+            <h3>省内热点河道实时水情</h3>
+            <el-table
+              :data="tableData"
+              height="250"
+              border
+              style="width: 100%">
+              <el-table-column
+                fixed
+                prop="date"
+                label="站名"
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="name"
+                label="站址"
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="address"
+                label="河名">
+              </el-table-column>
+              <el-table-column
+                prop="address"
+                label="水位（米）">
+              </el-table-column>
+              <el-table-column
+                prop="address"
+                label="流量（米³/秒）">
+              </el-table-column>
+              <el-table-column
+                prop="address"
+                label="时间">
+              </el-table-column>
+              <el-table-column
+                prop="address"
+                label="警戒水位（米）">
+              </el-table-column>
+            </el-table>
+            <h3>省内重点水库实时水情</h3>
             <el-table
               :data="tableData"
               height="250"
@@ -130,53 +180,60 @@
         <div class="third-line">
           <!-- 其他地方水利网站 -->
           <div class="other-province">
-              <h4>其他地方水利网站</h4>
+              <h3>其他地方水利网站</h3>
               <ul>
                 <li><a href="http://www.bjwater.gov.cn/">北京</a></li>
                 <li><a href="">天津</a></li>
                 <li><a href="http://slt.hebei.gov.cn/">河北</a></li>
                 <li><a href="">山西</a></li>
               </ul>
+              <br>
               <ul>
-                <li><a href="">内蒙古</a></li>
+                <li><a href="http://slt.shaanxi.gov.cn/">青海</a></li>
                 <li><a href="http://www.dwr.ln.gov.cn/">辽宁</a></li>
                 <li><a href="http://slt.jl.gov.cn/">吉林</a></li>
                 <li><a href="">黑龙江</a></li>
               </ul>
+              <br>
               <ul>
                 <li><a href="">上海</a></li>
                 <li><a href="">江苏</a></li>
                 <li><a href="http://www.zjwater.gov.cn/">浙江</a></li>
                 <li><a href="http://www.ahsl.gov.cn/">安徽</a></li>
               </ul>
+              <br>
               <ul>
                 <li><a href="">福建</a></li>
                 <li><a href="http://www.jxwrd.gov.cn/">江西</a></li>
                 <li><a href="http://www.sdwr.gov.cn/">山东</a></li>
                 <li><a href="http://www.hnsl.gov.cn/">河南</a></li>
               </ul>
+              <br>
               <ul>
                 <li><a href="http://www.hubeiwater.gov.cn/">湖北</a></li>
                 <li><a href="">湖南</a></li>
                 <li><a href="http://slt.gd.gov.cn/">广东</a></li>
                 <li><a href="http://www.gxwater.gov.cn/">广西</a></li>
               </ul>
+              <br>
               <ul>
                 <li><a href="http://swt.hainan.gov.cn/sswt/index.shtml">海南</a></li>
                 <li><a href="http://slj.cq.gov.cn/Pages/Home.aspx">重庆</a></li>
                 <li><a href="">四川</a></li>
-                <li><a href="http://www.gzmwr.gov.cn/">贵州</a></li>
+                <li><a href="">内蒙古</a></li>
               </ul>
+              <br>
               <ul>
                 <li><a href="http://www.wcb.yn.gov.cn/">云南</a></li>
                 <li><a href="">西藏</a></li>
                 <li><a href="http://slt.shaanxi.gov.cn/">陕西</a></li>
                 <li><a href="">甘肃</a></li>
               </ul>
+              <br>
               <ul>
                 <li><a href="">宁夏</a></li>
-                <li><a href="http://slt.shaanxi.gov.cn/">青海</a></li>
                 <li><a href="http://xjwater.xinjiang.gov.cn/">新疆</a></li>
+                <li><a href="http://www.gzmwr.gov.cn/">贵州</a></li>
               </ul>
           </div>
           <!-- 各流域网站 -->
@@ -240,6 +297,14 @@ export default {
       art_num: 0,
       activeName:'second',
       tableData:[],
+      imgList:[
+        {index: 0,src:require('../common/images/info1.jpg')},
+        {index: 1,src:require('../common/images/guany1.png')},
+        {index: 2,src:require('../common/images/guany1.png')},
+        {index: 3,src:require('../common/images/guany1.png')},
+        {index: 4,src:require('../common/images/guany1.png')},
+        {index: 5,src:require('../common/images/guany1.png')},
+      ],
     }
   },
   computed:{
@@ -272,30 +337,78 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+  html,body{
+    margin: 0;
+    padding: 0;
+  }
+  a{
+    color: #000;
+    &:hover{
+      color: rgb(107, 106, 106);
+    }
+  }
+
   .container{
     position: relative;
     margin-top:100px;
+    //background: rgb(233, 233, 233);
+    li{
+      list-style: none;
+    }
     .top{
       display: flex;
       flex-direction: row;
       .first-line{
         width: 25%;
         height: 100%;
-        background: yellow;
         margin-right: 3%;
         .news{
           border-radius:20px;
+          background: rgb(32, 128, 192);
+          h3{
+            padding-top: 10px;
+          }
+          ul{
+            margin-left: -15%;
+            padding-bottom: 10px;
+            li{
+              margin-bottom: 5px;
+              a{
+                color: rgb(255, 255, 255);
+                &:hover{
+                  color:#c7c7c7;
+                }
+              }
+            }
+          }
+        }
+        .Real-time-hydrologic{
+          height: 300px;
+          margin-top: 60px;
+          border: #eeeeee solid;
+          border-radius: 20px;
+        }
+        .seven-river{
+          border-radius:20px;
+          background: #eeeeee;
+          h3{
+            padding-top: 10px;
+          }
+          ul{
+            padding-bottom: 10px;
+            margin-left: -10%;
+          }
         }
       }
       .second-line{
-        width: 44%;
+        width: 48%;
         height: 100%;
-        background: green;
+        
         .today-rain{
           height: 100px;
           line-height: 50px;
           margin: 10px auto;
-          border: 1px solid cornflowerblue;
+          border: solid #eeeeee;
           overflow: hidden;
           .marquee-list{
             animation: myMove 5s linear infinite;
@@ -305,13 +418,75 @@ export default {
               }
             }
           }
+          .hot-info{
+            height: 250px;
+          }
         }
       }
       .third-line{
-        width: 25%;
+        width: 21%;
         height: 100%;
         margin-left: 3%;
-        background: pink;
+        ul{
+          width: 100%;
+        }
+        .other-province{
+          border-radius:20px;
+          background: #eeeeee;
+          height: 340px;
+          h3{
+            padding-top: 10px;
+          }
+          li{
+            float: left;
+            list-style: none;
+            padding-right: 20px;
+          }
+        }
+        .basin{
+          border-radius:20px;
+          background: #eeeeee;
+          margin-top: 40px;
+          h3{
+            padding-top: 10px;
+          }
+          ul{
+            margin-left: -40px;
+            padding-bottom: 10px;
+            li{
+              margin-top: 10px;
+            }
+          }
+        }
+        .friendly-link{
+          border-radius:20px;
+          background: #eeeeee;
+          h3{
+            padding-top: 10px;
+          }
+          ul{
+            margin-left: -40px;
+            padding-bottom: 10px;
+            li{
+              margin-top: 10px;
+            }
+          }
+        }
+        .water-knowladge{
+          border-radius:20px;
+          background: #eeeeee;
+          h3{
+            padding-top: 10px;
+          }
+          ul{
+            margin-left: -40px;
+            padding-bottom: 10px;
+            li{
+              margin-top: 10px;
+            }
+          }
+        }
+
       }
     
   }
@@ -319,7 +494,7 @@ export default {
   // 文字无缝滚动
   @keyframes myMove {
       0% {
-        transform: translateY(0);
+        transform: translateY(100px);
       }
       100% {
         transform: translateY(-300px);
@@ -348,11 +523,14 @@ export default {
     margin: 0;
   }
   
-  .el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
+  .iImg{
+    height: 200px;
   }
+  // .el-carousel__item:nth-child(2n) {
+  //   background-color: #99a9bf;
+  // }
   
-  .el-carousel__item:nth-child(2n+1) {
-    background-color: #d3dce6;
-  }
+  // .el-carousel__item:nth-child(2n+1) {
+  //   background-color: #d3dce6;
+  // }
 </style>
