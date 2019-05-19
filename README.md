@@ -1,8 +1,21 @@
 # hhu_water_conservancy
 一个水利信息相关的web
 
+*主要是借鉴了 全国水雨情网站 长江水文网 江苏土壤墒情监测网*
 
-主要是借鉴了 全国水雨情网站 长江水文网 江苏土壤墒情监测网
+使用说明：
+本项目是一款基于Vue+webpack开发的前端web页面，在使用被项目之前请先安装 **nodeJS** [官方下载](http://nodejs.cn/api/)和**git** [官方下载](https://git-scm.com/) 
+下载本项目后打开项目根目录
+命令行运行：
+
+`npm install`
+
+`npm run dev`
+
+命令行提示 如下即说明成功，在浏览器打开链接即可，默认为本地8080的端口
+>Your application is running here: http://localhost:8080
+
+***
 
 项目进度：
 2019.05.06
