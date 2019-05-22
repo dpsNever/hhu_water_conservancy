@@ -27,19 +27,18 @@ export default {
   color: #2c3e50;
   margin: 0 auto;
   width: 1400px;
-  height: 200px;
-  background:#fff url(./common/images/1.jpg) no-repeat center;
+  height: 290px;
+  background:#fff url(./common/images/organization.jpg) no-repeat center;
   border-radius: 20px;
  .top-nav{
   display: flex;
-  
-  width: 60%;
+  background: #000;
+  width: 100%;
   flex-direction: row;
   list-style: none;
   color: #000;
   position: relative;
-  
-  top:90px;
+  top:150px;
     img{
       width: 160px;
       height: 100%;  

@@ -6,6 +6,7 @@
      -->
      <!-- 头
      
+     
      部 -->
       <div class="top">
         <div class="first-line">
@@ -90,7 +91,7 @@
             </div>
           <div class="hot-info">
             <h3>热点信息</h3>
-             <el-carousel :interval="4000" type="card" height="200px">
+             <el-carousel :interval="4000"  height="200px">
               <el-carousel-item v-for="(item,index) in imgList" :key="index">
                 <img :src="item.src" class="iImg" alt="#">
               </el-carousel-item>
@@ -352,7 +353,7 @@ export default {
 
   .container{
     position: relative;
-    margin-top:100px;
+    margin-top:160px;
     //background: rgb(233, 233, 233);
     li{
       list-style: none;
