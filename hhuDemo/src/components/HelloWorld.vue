@@ -27,7 +27,7 @@
           </div>
           <div class="Real-time-hydrologic">
               <el-tabs v-model="activeName"  stretch="true">
-                <el-tab-pane label="用户管理" name="first">用户管理
+                <el-tab-pane label="实时水情" name="first">
                     <el-table
                       :data="tableData"
                       style="width: 100%">
@@ -51,7 +51,7 @@
                       </el-table-column>
                     </el-table>
                 </el-tab-pane>
-                <el-tab-pane label="汛情简报" name="second">配置管理
+                <el-tab-pane label="汛情简报" name="second">
                     <ul>
                       <li><a href="">2018年长江汛情简报第07期</a></li>
                       <li><a href="">2018年长江汛情简报第06期</a></li>
@@ -62,7 +62,7 @@
                       <li><a href="">2018年长江汛情简报第01期</a></li>
                     </ul>
                 </el-tab-pane>
-                <el-tab-pane label="水雨晴报告" name="third">角色管理
+                <el-tab-pane label="水雨晴报告" name="third">
 
                 </el-tab-pane>
                 
@@ -91,7 +91,7 @@
             </div>
           <div class="hot-info">
             <h3>热点信息</h3>
-             <el-carousel :interval="4000"  height="200px">
+             <el-carousel :interval="4000"  height="400px">
               <el-carousel-item v-for="(item,index) in imgList" :key="index">
                 <img :src="item.src" class="iImg" alt="#">
               </el-carousel-item>
@@ -301,12 +301,12 @@ export default {
       activeName:'second',
       tableData:[],
       imgList:[
-        {index: 0,src:require('../common/images/info1.jpg')},
-        {index: 1,src:require('../common/images/guany1.png')},
-        {index: 2,src:require('../common/images/guany1.png')},
-        {index: 3,src:require('../common/images/guany1.png')},
-        {index: 4,src:require('../common/images/guany1.png')},
-        {index: 5,src:require('../common/images/guany1.png')},
+        {index: 0,src:require('../common/images/news6.jpg')},
+        {index: 1,src:require('../common/images/news1.jpg')},
+        {index: 2,src:require('../common/images/news2.jpg')},
+        {index: 3,src:require('../common/images/news3.jpg')},
+        {index: 4,src:require('../common/images/news4.jpg')},
+        {index: 5,src:require('../common/images/news5.jpg')},
       ],
     }
   },
@@ -353,7 +353,12 @@ export default {
 
   .container{
     position: relative;
-    margin-top:160px;
+    margin-top:300px;
+    background:#eeeeee;
+    width: 1400px;
+    margin: 0 auto;
+    top: 300px;
+    border-radius: 10px;
     //background: rgb(233, 233, 233);
     li{
       list-style: none;
@@ -366,8 +371,11 @@ export default {
         height: 100%;
         margin-right: 3%;
         .news{
+          position: relative;
+          left: 10px;
+          top: -10px;
           border-radius:20px;
-          background: rgb(32, 128, 192);
+          background: rgb(52,130,196);
           h3{
             padding-top: 10px;
           }
@@ -386,14 +394,16 @@ export default {
           }
         }
         .Real-time-hydrologic{
-          height: 300px;
-          margin-top: 60px;
-          border: #eeeeee solid;
+          height: 380px;
+          margin-left: 10px;
+          border: #ffffff solid;
           border-radius: 20px;
+          background: #fff;
         }
         .seven-river{
           border-radius:20px;
-          background: #eeeeee;
+          background: #fff;
+          margin-left: 10px;
           h3{
             padding-top: 10px;
           }
@@ -411,7 +421,9 @@ export default {
           height: 100px;
           line-height: 50px;
           margin: 10px auto;
-          border: solid #eeeeee;
+          border: solid rgb(233, 233, 233);
+          border-radius: 10px;
+          background: rgb(255, 255, 255);
           overflow: hidden;
           .marquee-list{
             animation: myMove 5s linear infinite;
@@ -422,10 +434,17 @@ export default {
             }
           }
           .hot-info{
-            height: 250px;
+            height: 400px;
+            img{
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .hot-water{
+            margin-top: 80px;
           }
         }
-        .third-line{
+      .third-line{
         width: 21%;
         height: 100%;
         margin-left: 3%;
@@ -433,8 +452,9 @@ export default {
           width: 100%;
         }
         .other-province{
+          margin-right: 10px;
           border-radius:20px;
-          background: #eeeeee;
+          background: #ffffff;
           height: 340px;
           h3{
             padding-top: 10px;
@@ -446,8 +466,9 @@ export default {
           }
         }
         .basin{
+          margin-right: 10px;
           border-radius:20px;
-          background: #eeeeee;
+          background: #ffffff;
           margin-top: 40px;
           h3{
             padding-top: 10px;
@@ -461,8 +482,9 @@ export default {
           }
         }
         .friendly-link{
+          margin-right: 10px;
           border-radius:20px;
-          background: #eeeeee;
+          background: #ffffff;
           h3{
             padding-top: 10px;
           }
@@ -475,8 +497,9 @@ export default {
           }
         }
         .water-knowladge{
+          margin-right: 10px;
           border-radius:20px;
-          background: #eeeeee;
+          background: #ffffff;
           h3{
             padding-top: 10px;
           }
@@ -493,7 +516,7 @@ export default {
     .bottom{
       width: 100%;
       height: 50px;
-      background: rgb(32, 128, 192);
+      background: rgb(52,130,196);
       .annotation{
         p{
           line-height: 50px;

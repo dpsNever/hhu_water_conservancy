@@ -1,11 +1,8 @@
 <template>
     <div class="container">
-      <el-tabs v-model="activeName" @tab-click="handleClick">
-        <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
-        <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
-        <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
-        <el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
-      </el-tabs>
+      <baidu-map class="map" center="江苏" :zoom="8">
+
+      </baidu-map>
     </div>
 </template>
 
@@ -25,8 +22,12 @@ export default {
 .container{
     width: 100%;
     height: 100%;
-    
-    margin-top: 100px;
+    position: relative;
+    margin-top: 300px;
+}
+.map{
+  width: 100%;
+  height: 400px;
 }
 
 </style>
