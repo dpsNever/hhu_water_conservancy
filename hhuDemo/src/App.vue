@@ -1,7 +1,7 @@
 <template>
   <div id="app" >
     <div class="navLogo">
-      <img src="./common/images/navLogo.png" alt="">
+      <img src="./common/images/navLogo2.png" alt="">
     </div>
     <ul class="top-nav">
       <li><router-link v-bind:to="'/'" exact><img id="img1" src="./common/images/home2.png" alt=""></router-link></li>

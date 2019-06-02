@@ -15,6 +15,6 @@ export default {
     width: 100%;
     height: 100%;
     background:red;
-    margin-top: 100px;
+    margin-top: 300px;
 }
 </style>
